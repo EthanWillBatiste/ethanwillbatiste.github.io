@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('portfolio-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <title>RBC Abnormality Detection — Ethan Batiste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      Ethan Batiste
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="statement.html">Position Statement</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">◑</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <article class="project-detail">
+
+      <a href="projects.html" class="back-link fade-up">Back to Projects</a>
+
+      <p class="detail-tag fade-up">Embedded Systems</p>
+      <h1 class="detail-title fade-up">Real Time Detection of Microhematuria</h1>
+        <div class="tech-list fade-up">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">C</span>
+          <span class="tech-tag">Data Structures and Algorithms</span>
+          <span class="tech-tag">Automated Systems</span>
+        </div>
+      <p class="detail-subtitle fade-up">
+        I automated the software pipeline from imaging of urine under a microscope to image detection using machine learning to quicken the diagnosis of microhematuria, the most common diagnosis in urology.
+      </p>
+
+      <div class="detail-hero-img fade-up">
+        <!-- <img src="assets/p1-hero.jpg" alt="Project One"> -->
+        <img src="images/UTBiome.png" alt="UTBiome">
+      </div>
+
+      <div class="detail-meta fade-up">
+        <div class="meta-item">
+          <label>Role</label>
+          <span>Design Team Member</span>
+        </div>
+        <div class="meta-item">
+          <label>Year</label>
+          <span>2025-2026</span>
+        </div>
+        <div class="meta-item">
+          <label>Duration</label>
+          <span>8 Months</span>
+        </div>
+        <div class="meta-item">
+          <label>Context</label>
+          <span>UTBiome Design Team @UofT</span>
+        </div>
+      </div>
+
+      <div class="detail-body fade-up">
+
+        <h3>Overview</h3>
+        <p>
+          Microhematuria is the most common diagnosis in urology, but health clinics' ability to diagnose is limited by the requirement to send samples to a lab and wait for results. 
+          To solve this, I worked as part of a team to create a microscope that takes photos of samples and uses image detection software to determine if blood is present. 
+          The project aims to allow instant on-device red blood cell count for samples of urine so clinics can make efficient diagnoses. 
+          In my role, I programmed software for both a Raspberry Pi and a computer to make the pipeline from video capture to detection seamless.
+        </p>
+
+        <h3>Technical Approach</h3>
+        <p>
+          My technical approach to this project aimed to create a pipeline that was scalable, had little latency, and was intuitive to use. 
+          I did this by ensuring code runs using an efficient algorithm in terms of Big O Notation, reduced files to byte arrays which could be easily sent to a computer, and reduced the number of user inputs required to send files between computers. 
+          I am continuing to make the process more intuitive by adding an interface with buttons and automatically running the program using crontab.
+        </p>
+
+        <h3>Results &amp; Impact</h3>
+        <p>
+          So far, I have automated the sending of files and improved the efficiency of the algorithm. As I continue to work on the project, I will create a better interface that is more automated so the product can be easily used by clinicians. 
+          Once the team has completed all of the different components of the product, we will present it to the Farcas Lab team so they can tweak and refine the product so it is ready for clinicians use.
+        </p>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <span class="footer-name">Ethan Batiste</span>
+    <div class="footer-links">
+      <a href="mailto:ethan.will.batiste@gmail.com" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://linkedin.com/in/ethan-batiste/" target="_blank" rel="noopener" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.1.9-2 2-2s2 .9 2 2v5"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

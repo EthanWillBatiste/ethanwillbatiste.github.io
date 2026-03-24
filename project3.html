@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('portfolio-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <title>Accessible Filming — Ethan Batiste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      Ethan Batiste
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="statement.html">Position Statement</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">◑</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <article class="project-detail">
+
+      <a href="projects.html" class="back-link fade-up">Back to Projects</a>
+
+      <p class="detail-tag fade-up">Intro to Engineering Design</p>
+      <h1 class="detail-title fade-up">Poster Alignment Mechanism</h1>
+        <div class="tech-list fade-up">
+          <span class="tech-tag">Framing an Opportunity</span>
+          <span class="tech-tag">Diverging</span>
+          <span class="tech-tag">Converging</span>
+          <span class="tech-tag">Intro to Prototyping</span>
+        </div>
+      <p class="detail-subtitle fade-up">
+        As my formal introduction to engineering design in practice, I worked with a team to create a mechanism to allow a single person to efficiently align a poster.
+      </p>
+
+      <div class="detail-hero-img fade-up">
+        <!-- <img src="assets/p1-hero.jpg" alt="Project One"> -->
+        <img src="images/PosterAlignment.png" alt="PosterAlignment">
+      </div>
+
+      <div class="detail-meta fade-up">
+        <div class="meta-item">
+          <label>Role</label>
+          <span>Team Member</span>
+        </div>
+        <div class="meta-item">
+          <label>Year</label>
+          <span>2025</span>
+        </div>
+        <div class="meta-item">
+          <label>Duration</label>
+          <span>4 Months</span>
+        </div>
+        <div class="meta-item">
+          <label>Context</label>
+          <span>UofT Course Project</span>
+        </div>
+      </div>
+
+      <div class="detail-body fade-up">
+
+        <h3>Overview</h3>
+        <p>
+          In my first semester at the University of Toronto, I worked with a team to create a mechanism that allowed a single person to easily align posters. 
+          The idea came from our personal experiences putting up posters in our residences, but our solution and process was entirely rooted in the engineering design process. 
+          We began by framing a concept, completing rounds of diverging and converging to come up with a solution. 
+          We ultimately proposed a solution using a hinge and weights that aligned a poster using gravity, resulting in minimal human error during its use. 
+          This project was continued until the preliminary prototyping phase, when it ended in a thorough design report detailing all of our progress.
+        </p>
+
+        <h3>Technical Approach</h3>
+        <p>
+          As my introduction to engineering design, this project was the test subject for many new tools I was learning in class. 
+          These tools included morph charts, pugh charts, different brainstorming tools, and how to perform effective literature review using published codes and standards. 
+          My experience completing this project has greatly impacted my current engineering design process by informing the brainstorming tools I use, such as biomimicry and wishing -- a tool where you think of the "craziest solution" possible. 
+          I also improved my ability to effectively collaborate in meetings as I began taking meeting notes as well as hosting teamwork sessions to improve team cohesion.
+        </p>
+
+        <h3>Results &amp; Impact</h3>
+        <p>
+          The project culminated in the verification of our recommended design to solve the poster alignment opportunity. 
+          We organized our work into a design report, which was presented to the teaching team to create a fully justified argument for the design we put forward. 
+          Although the project did not make it very far into the entire engineering design pipeline, it taught me immense knowledge about how to successfully engage in engineering design using tools, my engineering judgement, and justification for decisions.
+        </p>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <span class="footer-name">Ethan Batiste</span>
+    <div class="footer-links">
+      <a href="mailto:ethan.will.batiste@gmail.com" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://linkedin.com/in/ethan-batiste/" target="_blank" rel="noopener" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.1.9-2 2-2s2 .9 2 2v5"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

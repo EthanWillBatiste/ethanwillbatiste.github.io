@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('portfolio-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <title>SPARTN — Ethan Batiste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      Ethan Batiste
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="statement.html">Position Statement</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">◑</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <article class="project-detail">
+
+      <a href="projects.html" class="back-link fade-up">Back to Projects</a>
+
+      <p class="detail-tag fade-up">Wet Lab Research</p>
+      <h1 class="detail-title fade-up">Medical Microrobotics for Drug Delivery</h1>
+        <div class="tech-list fade-up">
+          <span class="tech-tag">Wet Lab Experimentation</span>
+          <span class="tech-tag">ImageJ</span>
+          <span class="tech-tag">Procedure Writing</span>
+          <span class="tech-tag">Report Writing</span>
+        </div>
+      <p class="detail-subtitle fade-up">
+        I led a novel application of bovine sperm with chemically actuated antibiotic filled microparticles to disrupt antibiotic resistant bacteria.
+      </p>
+
+      
+      <div class="detail-hero-img fade-up">
+          <div class="slideshow">
+      <div class="slideshow-track">
+
+        <div class="slideshow-slide">
+          <img src="images/SPARTN.png" alt="SPARTN">
+        </div>
+        <div class="slideshow-slide">
+          <img src="images/SPARTNBiofilm.png" alt="SPARTNBiofilm">
+        </div>
+        <div class="slideshow-slide">
+          <img src="images/PlanPhoto.png" alt="ResearchPlan">
+        </div>
+        <div class="slideshow-slide">
+          <img src="images/Microparticles1.png" alt="Microparticles">
+        </div>
+
+      </div>
+
+      <button class="slideshow-btn slideshow-btn--prev" aria-label="Previous">&#8592;</button>
+      <button class="slideshow-btn slideshow-btn--next" aria-label="Next">&#8594;</button>
+
+      <div class="slideshow-dots">
+        <button class="slideshow-dot active"></button>
+        <button class="slideshow-dot"></button>
+        <button class="slideshow-dot"></button>
+        <button class="slideshow-dot"></button>
+      </div>
+    </div>
+        <!-- <img src="assets/p1-hero.jpg" alt="Project One"> -->
+      </div>
+
+      <div class="detail-meta fade-up">
+        <div class="meta-item">
+          <label>Role</label>
+          <span>Visiting Researcher @ UWaterloo</span>
+        </div>
+        <div class="meta-item">
+          <label>Year</label>
+          <span>2024-2025</span>
+        </div>
+        <div class="meta-item">
+          <label>Duration</label>
+          <span>12 Months</span>
+        </div>
+        <div class="meta-item">
+          <label>Context</label>
+          <span>Medical Microrobotics Lab</span>
+        </div>
+      </div>
+
+      <div class="detail-body fade-up">
+
+        <h3>Overview</h3>
+        <p>
+          In this project, a partner and I developed Sperm-Powered Antibiotic Releasing Technology for Nanodelivery (SPARTN), which leverages the natural motility, small size, and surface-seeking hydrodynamic behavior of bull sperm. 
+          These qualities were used to penetrate and mechanically disrupt biofilm structures. Biofilms formed by bacteria such as E. coli are of growing concern in healthcare because they are highly resistant to antibiotics due to their dense extracellular matrix, which limits antibiotic penetration and protects the bacteria within. 
+          To address this, I created SPARTN by attaching positively charged gelatin particles loaded with antibiotics to the naturally negatively charged sperm cells. 
+          This created a system where the sperm could mechanically disrupt the extracellular matrix due to their clumping, tendency to move towards surfaces, and tail impact force, while antibiotics were released to eliminate the inner bacterial colony. 
+          Although the loading of the gelatin particles was not completed due to time constraints, promising results occurred, as can be seen in the images of disrupted biofilm above. 
+          The project was completed at the Medical Microrobotics Lab at the University of Waterloo under the guidance of Assistant Professor Veronika Magdanz and her research team.
+        </p>
+
+        <h3>Technical Approach</h3>
+        <p>
+          The technical approach for this project was based heavily on published literature. 
+          Journal articles helped me create detailed procedures for preparing bull spermatozoa, fabricating microparticles, and growing biofilm. 
+          Beyond this, I learned common techniques for data analysis, including the use of ImageJ.
+
+        </p>
+        <p>
+          The largest obstacle in this project was bridging the gap between my education thus far and the project I aimed to complete. 
+          Understanding complex mathematics, complex physics, and building a concrete research plan were difficult tasks as I was in Grade 12 at the beginning of the project. 
+          I bridged the gap through consistent communication with my supervisor and my partner, as well as by taking notes and continuously reflecting on what I was learning. 
+          By collaborating with others, I was able to better understand concepts by asking questions and by teaching them to my partner to solidify my understanding. 
+          Similarly, reflecting on my learning helped me ensure that I fully understood the topic and was able to teach it to others rather than regurgitate the words I read. 
+          By creating a solid understanding of relevant topics, I was able to ensure that my engineering design decisions were justified and appropriate for the project.
+        </p>
+
+        <h3>Results &amp; Impact</h3>
+        <p>
+          By combining mechanical biofilm disruption with localized antibiotic delivery, I aimed to improve the effectiveness of biofilm eradication compared to conventional antibiotic treatments alone. 
+          This is significant because biofilms are currently very difficult to eradicate from medical equipment, including urinary catheters, often leading to urinary tract infections. 
+          It was ultimately found that SPARTN was able to disrupt biofilms due to mechanical disruption. I hope to continue to research this in the future, as the results and experimentation presented interesting interactions between bull sperm and other components of the experiment. 
+          This project taught me how to complete an effective literature review, general wet lab skills, microscopy, data analysis using softwares such as Image J, and how to effectively present results.
+        </p>
+
+        
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <span class="footer-name">Ethan Batiste</span>
+    <div class="footer-links">
+      <a href="mailto:ethan.will.batiste@gmail.com" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://linkedin.com/in/ethan-batiste/" target="_blank" rel="noopener" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.1.9-2 2-2s2 .9 2 2v5"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

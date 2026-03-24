@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('portfolio-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <title>Position Statement — Ethan Batiste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      Ethan Batiste
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="statement.html">Position Statement</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">◑</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page statement-page">
+
+    <div class="page-hero">
+      <p class="section-eyebrow fade-up">My Perspective</p>
+      <h1 class="fade-up">Position <span style="color:var(--green)">Statement</span></h1>
+    </div>
+
+    <div class="statement-layout">
+
+      <aside class="statement-sidebar fade-up">
+        <p class="statement-sidebar-label">Contents</p>
+        <nav class="statement-nav-list" aria-label="Sections">
+          <a href="#philosophy">Engineering Philosophy</a>
+          <a href="#approach">My Approach</a>
+          <a href="#values">Core Values</a>
+          <a href="#vision">Vision</a>
+        </nav>
+      </aside>
+
+      <div class="statement-content fade-up">
+
+        <section id="philosophy">
+          <h3>Engineering Philosophy</h3>
+          <p>
+            My engineering philosophy is shaped by the core values that I have gained throughout my life. 
+            I believe engineering should be completed with the end goal of contributing to the wellbeing of others, and to gain knowledge that can contribute to future innovations.
+            A core part of my belief and what shapes my decisions in engineering is the quote below: 
+          </p>
+          <blockquote class="pull-quote">
+            “Only those who attempt the absurd can achieve the impossible.” — Albert Einstein          </blockquote>
+          <p>
+            This quote reinforces my interest in innovation and doing what has never been done. In practice, I consistently seek ways that I can innovate to create improved solutions when appropriate. 
+            Thus far, I have had the privilege to exercise this in my deisgn of a project using Medical Microrobots for Drug Delivery, and an Accessible Filming project.
+          </p>
+        </section>
+
+        <section id="approach">
+          <h3>My Approach</h3>
+          <p>
+            My Approach to engineering design is shaped by what I have learned so far in Engineering Science, as well as my core values. 
+            To begin, Engineering Science proposes the design philosophy of FDCR -- Framing, Diverging, Converging, and Representing. 
+            The four parts are interwoven into a complete design approach, which I have followed in all of my projects at UofT. 
+            Framing begins by determining exactly what the opportunity is, as well as the scope and stakeholder interests. 
+            These parts of framing ultimately lead to creating a robust set of requirements and evaluation criteria against which a possible design can be critiqued. 
+            Diverging is the brainstorming process. Due to my interest in attempting the absurd, I am especially interested in the brainstorming tools of Wishing (brainstorming the craziest solution) and Biomimicry (implementing solutions found in nature in engineering design). 
+            Thirdly, converging is the process of critiquing possible designs against the requirements and evaluation criteria using holistic considerations, testing, as well as tools such as measurement matrices, Pugh charts, and pairwise comparisons. 
+            Finally, representing is the process of effectively communicating the decisions made throughout the process. 
+            The entire FDCR approach works by applying each part throughout the engineering design process as one iterates on their design before reaching a final solution.
+          </p>
+          <p>
+            My approach is further influenced by my value of helping others and my interest in trying new things. 
+            My value of helping others is seen in my consideration of stakeholders in all design decisions. 
+            As an excited student engineer, it can be easy to make decisions because they sound interesting, but I have learned that it is essential that I consider how each decision impacts the stakeholders, as they will be the people ultimately affected. 
+            On the other hand, my constant interest in trying new things has influenced my interest in Diverging and prototyping. 
+            I enjoy thinking of innovative solutions to problems as they allow me to continuously learn while creating solutions. 
+            Similarly, I place a heavy emphasis on the prototyping stage as I enjoy building and modelling my ideas so I can communicate them with others effectively.
+          </p>
+        </section>
+
+        <section id="values">
+          <h3>Core Values</h3>
+          <div class="tech-list">
+            <span class="tech-tag">Teamwork</span>
+            <span class="tech-tag">Innovation</span>
+            <span class="tech-tag">Accessibility</span>
+            <span class="tech-tag">Mastery</span>
+          </div>
+          <p style="margin-top:1.25rem">
+            As a student engineer, the core values I have gained throughout my life heavily impact my work. 
+            Each of my core values stems from two central ideas: consideration of others and constant curiosity. 
+            Since I was a child, I have understood that the most impactful thing one can do is help another person. 
+            As I grew up, this belief has fostered in my approach to engineering design through my values of teamwork and accessibility. 
+            I believe that engineering is a team-based process involving the direct and indirect stakeholders as well as the engineers. 
+            This has led me consistently considering the impact my decisions as an engineer have on all parties to ensure people are benefited by my actions. 
+            On the other hand, my core values of innovation and mastery stem from my constant curiosity and desire to learn new things. 
+            As a student engineer, I value designs that innovate on current solutions by incorporating new ideas, as it allows us to continuously learn and try new things.
+          </p>
+        </section>
+
+        <section id="vision">
+          <h3>Vision</h3>
+          <p>
+            In the future, I would like to continue to widen my scope of engineering projects by including projects from a variety of disciplines in engineering.
+            This includes but is not limited to biomedical, software, electrical, and material engineering projects. 
+            I hope to build these skills so I can become a more well-rounded engineer and so I can ultimately apply my gained skills to topics in biomedical engineering.
+          </p>
+          <p>
+            As a student engineer, I am continuously building skills while reflecting on my values to ensure I am working towards building designs that I am proud of and that represent me.
+            I will do this by ensuring that my projects can impact the lived experiences of others, while they engage my curiosity to try new things.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-name">Ethan Batiste</span>
+    <div class="footer-links">
+      <a href="mailto:ethan.will.batiste@gmail.com" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://linkedin.com/in/ethan-batiste/" target="_blank" rel="noopener" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.1.9-2 2-2s2 .9 2 2v5"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

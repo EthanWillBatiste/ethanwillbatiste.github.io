@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('portfolio-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <title>Matboard Bridge — Ethan Batiste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      Ethan Batiste
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="statement.html">Position Statement</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">◑</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <article class="project-detail">
+
+      <a href="projects.html" class="back-link fade-up">Back to Projects</a>
+
+      <p class="detail-tag fade-up">Structure Analysis and Parametric Design</p>
+      <h1 class="detail-title fade-up">Matboard Bridge Project</h1>
+      <div class="tech-list fade-up">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Structure Analysis</span>
+          <span class="tech-tag">Technical Drawing</span>
+          <span class="tech-tag">Mechanical Prototyping</span>
+      </div> 
+      <p class="detail-subtitle fade-up">
+        With a team, I built a matboard bridge using a constrained amount of matboard and concrete glue to hold as much weight as possible in a competition against other teams. 
+      </p>
+
+      <div class="detail-hero-img fade-up">
+        <!-- <img src="assets/p1-hero.jpg" alt="Project One"> -->
+        <img src="images/MatboardBridge.png" alt="MatboardBridge">
+      </div>
+
+      <div class="detail-meta fade-up">
+        <div class="meta-item">
+          <label>Role</label>
+          <span>Team Member</span>
+        </div>
+        <div class="meta-item">
+          <label>Year</label>
+          <span>2025</span>
+        </div>
+        <div class="meta-item">
+          <label>Duration</label>
+          <span>1 Month</span>
+        </div>
+        <div class="meta-item">
+          <label>Context</label>
+          <span>Summative Project </span>
+        </div>
+      </div>
+
+      <div class="detail-body fade-up">
+
+        <h3>Overview</h3>
+        <p>
+          As the culminating project to my civil engineering course in Fall 2025, I designed a matboard bridge with my team to compete against others to create the strongest bridge. 
+          The project was technically interesting because we directly applied the equations we had learned throughout the semester to create a physical design. 
+          Beyond this, it was also challenging to approach as creating a bridge has countless different parameters that can be adjusted, such as the cross-sections, height, width, spacing of diaphragms, and many more. 
+          To tackle this challenge, my team and I used our engineering judgement to make justified engineering decisions regarding the design of our bridge. 
+          For instance, although our initial design was very strong against tension, we understood that our bridge would fail due to the weakest part, meaning extra strength was ineffective. 
+          Beyond this, the project was won by having the best strength to weight ratio, meaning the amount of matboard used played a crucial role in making a 1.2m bridge.
+        </p>
+
+        <h3>Technical Approach</h3>
+        <p>
+          To efficiently compute a bridge's ability to withstand different failure modes, including types of global and local buckling, tension, and shear, I created a python code to compute the values of all failure modes as well as the bending moment and shear force diagrams of a bridge with given parameters.
+          This allowed us to quickly iterate on our design rather than waste valuable time repeating calculations. Beyond this, we used reference designs of bridges from previous competitions to identify how they broke so we could ensure that we strengthen our bridge in these areas.
+          One example of this was our use of 16 diaphragms, which were connected to the bridge to ensure it did not fail by tipping over.  
+        </p>
+
+        <h3>Results &amp; Impact</h3>
+        <p>
+          Unfortunately, our bridge did not win the competition as it had a major fault in the seam connecting the two pieces of matboard together, leading to an unexpected failure. 
+          Despite this, this project gave me a better understanding of how to approach engineering design practically and how to apply the programming languages I learned to improve my ability to iterate on designs.
+          Furthermore, the project exposed me to the final portion of engineering design including testing and completion of a product unlike my other projects at the University of Toronto which have stopped in the prototyping phase.
+          This ultimately helped me better understand how I can justify making small adjustments in the later stages of design using quantitative results.
+        </p>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <span class="footer-name">Ethan Batiste</span>
+    <div class="footer-links">
+      <a href="mailto:ethan.will.batiste@gmail.com" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://linkedin.com/in/ethan-batiste/" target="_blank" rel="noopener" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.1.9-2 2-2s2 .9 2 2v5"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

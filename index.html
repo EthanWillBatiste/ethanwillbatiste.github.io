@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('portfolio-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <title>Ethan Batiste - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      Ethan Batiste
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="statement.html">Position Statement</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">◑</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-eyebrow fade-up">Biomedical Engineering Student & Researcher</span>
+
+        <h1 class="hero-name fade-up">
+          Hello,<br>I'm <span class="accent">Ethan Batiste.</span>
+        </h1>
+
+        <p class="hero-about fade-up">
+          I am a first-year Engineering Science student at the University of Toronto, planning to specialize in Biomedical Systems Engineering (BME). I am also an aspiring BME researcher who hopes to apply what I learn to improve the health of others. I am particularly interested in drug delivery, surgical robotics, and tissue engineering.
+        </p>
+
+        <div class="keywords fade-up">
+          <span class="keyword">Wet Lab Skills</span>
+          <span class="keyword">CAD</span>
+          <span class="keyword">Report Writing</span>
+          <span class="keyword">MATLAB</span>
+          <span class="keyword">Python</span>
+          <span class="keyword">C</span>
+          <span class="keyword">Basic Circuit and Stucture Analysis</span>
+        </div>
+
+        <div class="hero-actions fade-up">
+  <a href="images/EthanBatisteCV.pdf" download class="resume-btn">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Download Resume
+  </a>
+</div>
+
+        
+      </div>
+
+      <div class="hero-photo-wrap">
+        <!-- Replace with your photo: <img src="assets/photo.jpg" alt="Your Name" /> -->
+        <img src="images/ethan-v1.jpg" alt="Ethan Batiste" />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="12" cy="8" r="4.5"/><path d="M3 21c0-4.5 4-8 9-8s9 3.5 9 8"/>
+          </svg>
+          <span>Your Photo Here</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FEATURED PROJECTS -->
+    <section class="featured-section">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">Selected Work</p>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <a href="projects.html" class="section-link">All Projects</a>
+      </div>
+
+      <div class="featured-grid">
+
+        <article class="project-card reveal" data-href="project1.html">
+          <div class="card-img-wrap">
+            <!-- <img src="assets/p1.jpg" alt="Project One"> -->
+             <img src="images/SPARTN.png" alt="Project One">
+          </div>
+          <div class="card-body">
+            <p class="card-tag">Wet Lab Research</p>
+            <h3 class="card-title">Medical Microrobotics for Drug Delivery</h3>
+            <p class="card-desc">I led a novel application of bovine sperm with chemically actuated antibiotic filled microparticles to disrupt antibiotic resistant bacteria.</p>
+            <span class="card-arrow">View Project</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-href="project2.html">
+          <div class="card-img-wrap">
+             <img src="images/UTBiome.png" alt="UTBiome">
+          </div>
+          <div class="card-body">
+            <p class="card-tag">C and Python Programming</p>
+            <h3 class="card-title">Real Time Detection of Microhematuria</h3>
+            <p class="card-desc">To allow for quicker diagnosis of microhematuria, I automated the software pipeline for red blood cell imaging to allow for real-time detection using ML immediately after capturing video.</p>
+            <span class="card-arrow">View Project</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-href="project4.html">
+          <div class="card-img-wrap">
+             <img src="images/AccessibleFilming.jpg" alt="AccessibleFilming">
+          </div>
+          <div class="card-body">
+            <p class="card-tag">Systems Design</p>
+            <h3 class="card-title">Accessible Filming</h3>
+            <p class="card-desc">Alongside a team, I developed an app that connects with an Arduino and two motors to move a GoPro, enabling someone with physical limitations to independently record.</p>
+            <span class="card-arrow">View Project</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <section class="education-section">
+  <div class="section-header">
+    <div>
+      <p class="section-eyebrow">Background</p>
+      <h2 class="section-title">Education</h2>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item reveal">
+      <div class="timeline-marker"></div>
+      <div class="timeline-date">2021 – 2025</div>
+      <div class="timeline-body">
+        <h4 class="timeline-title">Laurel Heights S.S.</h4>
+        <p class="timeline-sub">Ontario Secondary School Diploma</p>
+        <p class="timeline-desc">Overall Grade 12 average of 98%</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-marker"></div>
+      <div class="timeline-date">2024 – 2025</div>
+      <div class="timeline-body">
+        <h4 class="timeline-title">University of Waterloo</h4>
+        <p class="timeline-sub">Visiting Researcher</p>
+        <p class="timeline-desc">Led a BME research project.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-marker"></div>
+      <div class="timeline-date">2025 – Present</div>
+      <div class="timeline-body">
+        <h4 class="timeline-title">University of Toronto</h4>
+        <p class="timeline-sub">BASc - Engineering Science</p>
+        <p class="timeline-desc">Expected graduation: 2030</p>
+      </div>
+    </div>
+
+    <div class="timeline-item timeline-item--future reveal">
+      <div class="timeline-marker timeline-marker--future"></div>
+      <div class="timeline-date">Next</div>
+      <div class="timeline-body">
+        <h4 class="timeline-title">Future in Research and Industry</h4>
+        <p class="timeline-sub">The best chapter hasn't started yet.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-name">Ethan Batiste</span>
+    <div class="footer-links">
+      <a href="mailto:ethan.will.batiste@gmail.com" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://www.linkedin.com/in/ethan-batiste/" target="_blank" rel="noopener" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.1.9-2 2-2s2 .9 2 2v5"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

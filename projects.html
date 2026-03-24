@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('portfolio-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <title>My Projects — Ethan Batiste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      Ethan Batiste
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="statement.html">Position Statement</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">◑</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page projects-page">
+
+    <div class="page-hero">
+      <p class="section-eyebrow fade-up">All Work</p>
+      <h1 class="fade-up">My <span>Projects</span></h1>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card reveal" data-href="project1.html">
+        <div class="card-img-wrap">
+          <!-- <img src="assets/p1.jpg" alt="Project One"> -->
+          <img src="images/SPARTN.png" alt="SPARTN">
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Wet Lab Research</p>
+          <h3 class="card-title">Medical Microrobotics for Drug Delivery</h3>
+          <p class="card-desc">I led a novel application of bovine sperm with chemically actuated antibiotic filled microparticles to disrupt antibiotic resistant bacteria.</p>
+          <span class="card-arrow">View Project</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-href="project2.html">
+        <div class="card-img-wrap">
+          <img src="images/UTBiome.png" alt="UTBiome">
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Embedded Systems</p>
+          <h3 class="card-title">Real Time Detection of Microhematuria</h3>
+          <p class="card-desc">To allow for quicker diagnosis of microhematuria, I automated the software pipeline for red blood cell imaging to allow for real-time detection.</p>
+          <span class="card-arrow">View Project</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-href="project4.html">
+        <div class="card-img-wrap">
+          <img src="images/AccessibleFilming.jpg" alt="AccessibleFilming">
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Systems Design</p>
+          <h3 class="card-title">Accessible Filming</h3>
+          <p class="card-desc">Working with a team, I developed an app that connected with an Arduino and two motors to move a GoPro, enabling someone with physical limitations to independently record.</p>
+          <span class="card-arrow">View Project</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-href="project5.html">
+        <div class="card-img-wrap">
+          <img src="images/MatboardBridge.png" alt="MatboardBridge">
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Structure Analysis and Parametric Design</p>
+          <h3 class="card-title">Matboard Bridge Project</h3>
+          <p class="card-desc">With a team, I designed and built a Matboard Bridge to hold as much weight as possible in a competition against other teams through parametric design and structure analysis.</p>
+          <span class="card-arrow">View Project</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-href="project3.html">
+        <div class="card-img-wrap">
+          <img src="images/PosterAlignment.png" alt="PosterAlignment">
+        </div>
+        <div class="card-body">
+          <p class="card-tag">Intro to Engineering Design</p>
+          <h3 class="card-title">Poster Alignment Mechanism</h3>
+          <p class="card-desc">Alongside a team, I designed a solution to allow a person to align posters by themselves without requiring unergonomic positioning and excessive repositioning.</p>
+          <span class="card-arrow">View Project</span>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-name">Ethan Batiste</span>
+    <div class="footer-links">
+      <a href="mailto:ethan.will.batiste@gmail.com" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://linkedin.com/in/ethan-batiste/" target="_blank" rel="noopener" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.1.9-2 2-2s2 .9 2 2v5"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

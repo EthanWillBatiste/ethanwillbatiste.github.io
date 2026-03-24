@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function(){
+      var t = localStorage.getItem('portfolio-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <title>Accessible Filming — Ethan Batiste</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      Ethan Batiste
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">About Me</a></li>
+      <li><a href="projects.html">My Projects</a></li>
+      <li><a href="statement.html">Position Statement</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="toggle-icon">◑</span>
+        <span class="toggle-label">Dark</span>
+      </button>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <article class="project-detail">
+
+      <a href="projects.html" class="back-link fade-up">Back to Projects</a>
+
+      <p class="detail-tag fade-up">Systems Design</p>
+      <h1 class="detail-title fade-up">Accessible Filming</h1>
+      <div class="tech-list fade-up">
+          <span class="tech-tag">Arduino</span>
+          <span class="tech-tag">SwiftUI</span>
+          <span class="tech-tag">Validation Testing</span>
+          <span class="tech-tag">CAD</span>
+      </div>
+      <p class="detail-subtitle fade-up">
+        Alongside a team, I completed the engineering design process to create a design that enables a person with physical disabilities who is bound in a wheelchair to independently record footage. 
+        To create prototypes, I developed an app that connects with an Arduino and two motors to move a GoPro while it is mounted to the wheelchair.
+      </p>
+
+      <div class="detail-hero-img fade-up">
+        <div class="slideshow">
+      <div class="slideshow-track">
+
+        <div class="slideshow-slide">
+          <img src="images/AccessibleFilming.jpg" alt="AccessibleFilming">
+        </div>
+        <div class="slideshow-slide">
+          <img src="images/AppleWatch.png" alt="WatchOS">
+        </div>
+        <div class="slideshow-slide">
+          <img src="images/Beta.png" alt="Beta">
+        </div>
+
+      </div>
+
+      <button class="slideshow-btn slideshow-btn--prev" aria-label="Previous">&#8592;</button>
+      <button class="slideshow-btn slideshow-btn--next" aria-label="Next">&#8594;</button>
+
+      <div class="slideshow-dots">
+        <button class="slideshow-dot active"></button>
+        <button class="slideshow-dot"></button>
+        <button class="slideshow-dot"></button>
+      </div>
+    </div>
+        <!-- <img src="assets/p1-hero.jpg" alt="Project One"> -->
+        <div class="card-img-placeholder" style="height:100%">Project Hero Image</div>
+      </div>
+
+      <div class="detail-meta fade-up">
+        <div class="meta-item">
+          <label>Role</label>
+          <span>Team Member</span>
+        </div>
+        <div class="meta-item">
+          <label>Year</label>
+          <span>2026</span>
+        </div>
+        <div class="meta-item">
+          <label>Duration</label>
+          <span>4 Months</span>
+        </div>
+        <div class="meta-item">
+          <label>Context</label>
+          <span>UofT Course Project</span>
+        </div>
+      </div>
+
+      <div class="detail-body fade-up">
+
+        <h3>Overview</h3>
+        <p>
+          In my Engineering Design course in the second semester of my first year, I worked with a team to identify an opportunity within a community in Toronto that would improve their lived experience. 
+          My team found a community that creates short films, which included a member who loved to record but was limited by his physical disabilities. 
+          We made a request for proposals (RFP) which identified this opportunity, and was ultimately selected as one of the eight out of approximately fifty projects that would go forward. 
+          This entailed that multiple teams would be working to create a solution. Ultimately, eight teams will be presenting solutions to our RFP at a culminating showcase event in April 2026. 
+          Although the project has not finished yet, my team and I have converged to three final concepts, including the use of an Apple Watch connected to an arduino with two motors that physically rotates the camera. 
+          The Arduino and Apple Watch connect using Bluetooth, and the camera is attached to a mount on a wheelchair. 
+          So far, I have applied my technical skills in this project through CAD and creating an app on Apple WatchOS using Swift UI.
+        </p>
+
+        <h3>Technical Approach</h3>
+        <p>
+          Our team approached this process through iterations of diverging and converging on ideas using common brainstorming techniques, as well as common engineering converging tools such as morph charts, pairwise comparisons, and pugh charts. 
+          I learned how to use these tools effectively to inform my design process so I can make justified engineering decisions. 
+        </p>
+
+        <h3>Results &amp; Impact</h3>
+        <p>
+          Although we have not finished the project yet, this project has the ability to improve the lived experience of the community member, as we are working towards a solution to give him more independence when recording. 
+          This project has impacted me by allowing me to apply the technical knowledge I have learned thus far in Engineering Science, while also teaching me about engineering design tools.
+        </p>
+
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <span class="footer-name">Ethan Batiste</span>
+    <div class="footer-links">
+      <a href="mailto:ethan.will.batiste@gmail.com" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
+        </svg>
+        Email Me
+      </a>
+      <a href="https://linkedin.com/in/ethan-batiste/" target="_blank" rel="noopener" class="footer-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="2" width="20" height="20" rx="4"/>
+          <path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.1.9-2 2-2s2 .9 2 2v5"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
