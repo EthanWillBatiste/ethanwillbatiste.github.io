@@ -724,14 +724,30 @@ footer {
 
 /* ─── Responsive ─────────────────────────── */
 @media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-photo-wrap { min-height: 55vw; border-left: none; border-top: 1px solid var(--border); }
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+  }
+  .hero-content {
+    padding: 2.5rem 1.75rem;
+    overflow-y: visible;
+  }
+  .hero-photo-wrap {
+    height: 55vw;
+    min-height: 280px;
+    max-height: 420px;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
   .featured-grid { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
   .statement-layout { grid-template-columns: 1fr; gap: 2rem; }
   .statement-sidebar { position: static; }
   .detail-meta { grid-template-columns: repeat(2,1fr); }
+  .timeline { grid-template-columns: 1fr 1fr; padding-top: 2rem; }
 }
+
 @media (max-width: 680px) {
   .nav-links { display: none; }
   .nav-links.open {
@@ -744,9 +760,32 @@ footer {
   .hamburger { display: flex; }
   .featured-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 480px) {
-  footer { flex-direction: column; align-items: flex-start; }
+  .hero-name { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-about { font-size: 0.92rem; }
+  .keywords { gap: 0.4rem; }
+  .keyword { font-size: 0.65rem; padding: 0.3rem 0.65rem; }
+  .timeline { grid-template-columns: 1fr 1fr; }
   .detail-meta { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hero-content { padding: 2rem 1.25rem; }
+  .hero-photo-wrap { height: 70vw; max-height: 320px; }
+  .featured-section { padding: 2.5rem 1.25rem; }
+  .education-section { padding: 2.5rem 1.25rem; }
+  .projects-page { padding: 2rem 1.25rem; }
+  .project-detail { padding: 2rem 1.25rem; }
+  footer { flex-direction: column; align-items: flex-start; }
+  .detail-meta { grid-template-columns: 1fr; }
   .section-header { flex-direction: column; align-items: flex-start; }
+  .timeline { grid-template-columns: 1fr; padding-top: 0; padding-left: 2rem; }
+  .timeline::before {
+    top: 8px; bottom: 8px; left: 7px; right: auto;
+    width: 2.5px; height: auto;
+    background: linear-gradient(to bottom, var(--green), var(--orange), var(--border));
+  }
+  .timeline-item { padding: 0 0 2.5rem 0; }
+  .timeline-marker { top: 6px; left: -2rem; }
+  .resume-btn { width: 100%; justify-content: center; }
+  .section-link { width: fit-content; }
 }
