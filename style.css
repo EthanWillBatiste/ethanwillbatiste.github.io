@@ -784,6 +784,7 @@ footer {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--border);
+    z-index: 1;
   }
   .statement-sidebar-label { margin-bottom: 0.75rem; display: block; }
   .statement-nav-list {
@@ -805,7 +806,11 @@ footer {
     display: block;
     text-align: left;
   }
-  .statement-content { width: 100%; }
+  .statement-content { 
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
   .statement-content section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; }
   .statement-content h3 { font-size: 1.25rem; }
   .pull-quote { padding: 1.25rem; font-size: 1rem; margin: 1.25rem 0; }
