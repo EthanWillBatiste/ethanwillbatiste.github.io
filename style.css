@@ -728,21 +728,31 @@ footer {
 /* ─── Responsive ─────────────────────────── */
 @media (max-width: 960px) {
   .hero {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     height: auto;
     max-height: none;
   }
   .hero-content {
     padding: 2.5rem 1.75rem;
     overflow-y: visible;
+    display: contents;
   }
+  .hero-eyebrow { order: 1; padding: 0 1.75rem; }
+  .hero-name { order: 2; padding: 0 1.75rem; }
   .hero-photo-wrap {
+    order: 3;
     height: 55vw;
     min-height: 280px;
     max-height: 420px;
     border-left: none;
     border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
+  .hero-about { order: 4; padding: 0 1.75rem; margin-top: 2rem; }
+  .keywords { order: 5; padding: 0 1.75rem; }
+  .hero-actions { order: 6; padding: 0 1.75rem; }
   .featured-grid { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
   .statement-layout { grid-template-columns: 1fr; gap: 2rem; }
