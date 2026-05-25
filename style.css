@@ -192,6 +192,7 @@ nav.scrolled {
   border-radius: 20px;
   width: fit-content;
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 [data-theme="dark"] .hero-eyebrow { border-color: rgba(61,184,116,0.25); }
 
@@ -276,6 +277,7 @@ nav.scrolled {
   font-family: var(--mono);
   font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--orange); margin-bottom: 0.5rem;
+  margin-top: 1rem; 
 }
 .section-title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
