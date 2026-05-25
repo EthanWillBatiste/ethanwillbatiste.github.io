@@ -827,7 +827,8 @@ footer {
   }
   .statement-content section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; }
   .statement-content h3 { font-size: 1.25rem; }
-  .pull-quote { padding: 1.25rem; font-size: 1rem; margin: 1.25rem 0; }}
+  .pull-quote { padding: 1.25rem; font-size: 1rem; margin: 1.25rem 0; }
+}
 
 @media (max-width: 480px) {
   .hero-content { padding: 2rem 1.25rem; }
