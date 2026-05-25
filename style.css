@@ -461,7 +461,7 @@ nav.scrolled {
 .statement-page { padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 5rem); }
 .statement-layout {
   display: grid; grid-template-columns: 200px 1fr;
-  gap: 5rem; padding-top: 3rem;
+  gap: 5rem; padding-top: 1.5rem;
 }
 .statement-sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); align-self: start; }
 .statement-sidebar-label {
