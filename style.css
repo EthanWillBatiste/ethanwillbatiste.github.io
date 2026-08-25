@@ -192,7 +192,6 @@ nav.scrolled {
   border-radius: 20px;
   width: fit-content;
   margin-bottom: 2rem;
-  margin-top: 1rem;
 }
 [data-theme="dark"] .hero-eyebrow { border-color: rgba(61,184,116,0.25); }
 
@@ -277,7 +276,6 @@ nav.scrolled {
   font-family: var(--mono);
   font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--orange); margin-bottom: 0.5rem;
-  margin-top: 1rem; 
 }
 .section-title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
@@ -368,10 +366,7 @@ nav.scrolled {
 .projects-page {
   padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 5rem);
 }
-.page-hero { 
-   margin-bottom: 3rem; 
-   padding-top: 3rem;
-}
+.page-hero { margin-bottom: 3rem; }
 .page-hero h1 {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800; letter-spacing: -0.04em; color: var(--text);
@@ -461,7 +456,7 @@ nav.scrolled {
 .statement-page { padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 5rem); }
 .statement-layout {
   display: grid; grid-template-columns: 200px 1fr;
-  gap: 5rem; padding-top: 1.5rem;
+  gap: 5rem; padding-top: 3rem;
 }
 .statement-sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); align-self: start; }
 .statement-sidebar-label {
@@ -712,6 +707,62 @@ footer {
 [data-theme="dark"] .slideshow-dot { background: rgba(255,255,255,0.3); }
 [data-theme="dark"] .slideshow-dot.active { background: var(--green); }
 
+/* ─── Notice Modal ───────────────────────── */
+.notice-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(17,26,20,0.55);
+  backdrop-filter: blur(3px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.notice-overlay.visible {
+  opacity: 1; visibility: visible;
+}
+
+.notice-modal {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem 2.25rem;
+  max-width: 420px;
+  width: 100%;
+  transform: translateY(12px) scale(0.97);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.notice-overlay.visible .notice-modal {
+  transform: translateY(0) scale(1);
+}
+
+.notice-close {
+  position: absolute; top: 0.9rem; right: 0.9rem;
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--trans);
+}
+.notice-close:hover {
+  background: var(--orange-light);
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.notice-text {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  padding-right: 0.5rem;
+}
+
 /* ─── Animations ─────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
@@ -730,34 +781,24 @@ footer {
 /* ─── Responsive ─────────────────────────── */
 @media (max-width: 960px) {
   .hero {
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
     height: auto;
     max-height: none;
   }
   .hero-content {
     padding: 2.5rem 1.75rem;
     overflow-y: visible;
-    display: contents;
   }
-  .hero-eyebrow { order: 1; padding: 0 1.75rem; }
-  .hero-name { order: 2; padding: 0 1.75rem; }
   .hero-photo-wrap {
-    order: 3;
     height: 55vw;
     min-height: 280px;
     max-height: 420px;
     border-left: none;
     border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
   }
-  .hero-about { order: 4; padding: 0 1.75rem; margin-top: 2rem; }
-  .keywords { order: 5; padding: 0 1.75rem; }
-  .hero-actions { order: 6; padding: 0 1.75rem; }
   .featured-grid { grid-template-columns: 1fr 1fr; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
-  .statement-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .statement-layout { grid-template-columns: 1fr; gap: 2rem; }
   .statement-sidebar { position: static; }
   .detail-meta { grid-template-columns: repeat(2,1fr); }
   .timeline { grid-template-columns: 1fr 1fr; padding-top: 2rem; }
@@ -771,14 +812,7 @@ footer {
     background: var(--bg); padding: 2rem 1.5rem;
     border-top: 1px solid var(--border); gap: 0.25rem; z-index: 99;
   }
-  .nav-links.open a {
-    font-size: 1.05rem;
-    padding: 1rem 1.25rem;
-    border-radius: var(--radius-sm);
-    border-bottom: 1px solid var(--border);
-    width: 100%;
-    display: block;
-  }
+  .nav-links.open a { font-size: 1.05rem; padding: 1rem; }
   .hamburger { display: flex; }
   .featured-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
@@ -788,48 +822,6 @@ footer {
   .keyword { font-size: 0.65rem; padding: 0.3rem 0.65rem; }
   .timeline { grid-template-columns: 1fr 1fr; }
   .detail-meta { grid-template-columns: 1fr 1fr; }
-  .statement-page { padding: 2rem 1.25rem; }
-  .page-hero { padding-top: 2rem; margin-bottom: 2rem; }
-  .statement-layout {
-    display: flex;
-    flex-direction: column;
-  }
-  .statement-sidebar {
-    order: 1;
-    position: static;
-    width: 100%;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .statement-content {
-    order: 2;
-    width: 100%;
-  }
-  .statement-sidebar-label {
-    display: block;
-    margin-bottom: 0.75rem;
-  }
-  .statement-nav-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    border-left: none;
-    padding: 0;
-    margin: 0;
-  }
-  .statement-nav-list a {
-    padding: 0.6rem 0.8rem;
-    background: var(--bg-2);
-    border-radius: var(--radius-sm);
-    font-size: 0.8rem;
-    border: 1px solid var(--border);
-    text-align: center;
-    display: block;
-  }
-  .statement-content section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; }
-  .statement-content h3 { font-size: 1.25rem; }
-  .pull-quote { padding: 1.25rem; font-size: 1rem; margin: 1.25rem 0; }
 }
 
 @media (max-width: 480px) {
@@ -842,9 +834,6 @@ footer {
   footer { flex-direction: column; align-items: flex-start; }
   .detail-meta { grid-template-columns: 1fr; }
   .section-header { flex-direction: column; align-items: flex-start; }
-  .statement-page { padding: 2rem 1.25rem; }
-  .pull-quote { padding: 1.25rem 1.25rem; font-size: 1rem; }
-  .statement-content h3 { font-size: 1.25rem; }
   .timeline { grid-template-columns: 1fr; padding-top: 0; padding-left: 2rem; }
   .timeline::before {
     top: 8px; bottom: 8px; left: 7px; right: auto;
