@@ -167,26 +167,22 @@ function initSlideshows() {
 
 /* ---- First-visit notice on projects page ---- */
 function initProjectsNotice() {
-  const overlay = document.getElementById('noticeOverlay');
-  if (!overlay) return;
+  const toast = document.getElementById('noticeOverlay');
+  const closeBtn = document.getElementById('noticeClose');
+  if (!toast || !closeBtn) return;
 
   const KEY = 'projects-notice-seen';
+
   if (!localStorage.getItem(KEY)) {
-    overlay.classList.add('visible');
+    setTimeout(() => toast.classList.add('visible'), 400);
   }
 
-  document.getElementById('noticeClose')?.addEventListener('click', () => {
-    overlay.classList.remove('visible');
+  closeBtn.addEventListener('click', () => {
+    toast.classList.remove('visible');
     localStorage.setItem(KEY, 'true');
   });
-
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) {
-      overlay.classList.remove('visible');
-      localStorage.setItem(KEY, 'true');
-    }
-  });
 }
+
   /* ---- Init ---- */
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
