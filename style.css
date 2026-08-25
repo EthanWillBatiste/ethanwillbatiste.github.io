@@ -707,44 +707,59 @@ footer {
 [data-theme="dark"] .slideshow-dot { background: rgba(255,255,255,0.3); }
 [data-theme="dark"] .slideshow-dot.active { background: var(--green); }
 
-/* ─── Notice Modal ───────────────────────── */
-.notice-overlay {
-  position: fixed; inset: 0; z-index: 200;
-  background: rgba(17,26,20,0.55);
-  backdrop-filter: blur(3px);
-  display: flex; align-items: center; justify-content: center;
-  padding: 1.5rem;
-  opacity: 0; visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.notice-overlay.visible {
-  opacity: 1; visibility: visible;
-}
-
-.notice-modal {
-  position: relative;
+/* ─── Notice Toast ───────────────────────── */
+.notice-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  max-width: 320px;
+  width: calc(100% - 3rem);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  padding: 2rem 2.25rem;
-  max-width: 420px;
-  width: 100%;
-  transform: translateY(12px) scale(0.97);
-  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  padding: 1.5rem 1.6rem;
+  transform: translateY(24px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease, visibility 0.35s ease;
 }
-.notice-overlay.visible .notice-modal {
-  transform: translateY(0) scale(1);
+.notice-toast.visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.notice-toast-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 0.75rem;
+}
+.notice-toast-label::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--green);
+  border-radius: 50%;
 }
 
 .notice-close {
-  position: absolute; top: 0.9rem; right: 0.9rem;
-  width: 28px; height: 28px;
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 26px; height: 26px;
   display: flex; align-items: center; justify-content: center;
   background: var(--bg-2);
   border: 1px solid var(--border);
   border-radius: 50%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1;
   color: var(--text-muted);
   cursor: pointer;
@@ -757,10 +772,20 @@ footer {
 }
 
 .notice-text {
-  font-size: 0.92rem;
-  line-height: 1.7;
-  color: var(--text-2);
-  padding-right: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  padding-right: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .notice-toast {
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: auto;
+    max-width: none;
+  }
 }
 
 /* ─── Animations ─────────────────────────── */
